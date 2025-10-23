@@ -8,6 +8,7 @@ body{
     height: 250px;
     font-size: 22px;
     background-color: cyan;
+    color: white;
 }
 #box2{
     border: 5px;
@@ -15,4 +16,5 @@ body{
     height: 250px;
     font-size: 22px;
     background-color: #8f8bdb;
+    color: white;
 }
