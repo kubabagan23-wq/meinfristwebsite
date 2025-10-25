@@ -7,7 +7,7 @@ body{
     width: 250px;
     height: 250px;
     font-size: 22px;
-    background-color: cyan;
+    background: cyan;
     color: white;
 }
 #box2{
@@ -15,6 +15,6 @@ body{
     width: 250px;
     height: 250px;
     font-size: 22px;
-    background-color: #8f8bdb;
+    background: #8f8bdb;
     color: white;
 }
