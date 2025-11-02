@@ -18,7 +18,7 @@ body{
     background: green;
     color: white;
 }
-#box3{
+#box{
  width: 250px;
  height: 250px;
  background: red;
@@ -35,10 +35,10 @@ body{
  animation: 3s linear 0s infinite running mySlide;
  
 }
-#box3:hover{
+#box:hover{
 
 }
-#box3:active{
+#box:active{
  
 }
 
