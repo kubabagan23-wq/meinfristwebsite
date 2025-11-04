@@ -18,13 +18,13 @@ body{
     background: green;
     color: white;
 }
+
 #box{
  width: 250px;
  height: 250px;
- background: dodgerblue;
- font-size: 20px;
+ background: red;
+ font-size: 225px;
  text-align: center;
- color: black;
  /*
  animation: mySlide;
  animation-play-state: running;
