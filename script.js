@@ -1,0 +1,1 @@
+console.log(`Hello there! This is part 1 of java script coding`);
