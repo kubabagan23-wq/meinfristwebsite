@@ -1,58 +1,68 @@
-body{
-                         display: flex;
-                         flex-direction: column;
-                         align-items: center;
-                         background-color: hsl(0, 0%, 90%);
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(0, 0%, 90%);
+  font-family: Arial, serif;
 }
-#myH1{
-                         font-size: 4rem;
-                         font-family: "Arial";
-                         color: hsl(0, 0%, 25%);
+
+#myH1 {
+  font-size: 4rem;
+  color: hsl(0, 0%, 25%);
 }
-#container{
-                         display: flex;
-                         flex-direction: column;
-                         align-items: center;
-                         padding: 30px;
-                         border-radius: 50px;
-                         border: 5px solid;
-                         background-color: white;
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid black;
+  border-radius: 50px;
+  padding: 30px;
+  background-color: white;
 }
-#diplay{
-                         font-size: 5rem;
-                         font-family: monospace;
-                         font-weight: bold;
-                         color: hsl(0, 0%, 30%);
-                         text-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.75);
-                         margin-bottom: 25px;
+
+#display {
+  font-size: 5rem;
+  font-family: monospace;
+  font-weight: bold;
+  color: hsl(0, 0%, 30%);
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+  margin-bottom: 25px;
 }
-#controls button{
-                         font-size: 1.5rem;
-                         font-weight: bold;
-                         padding: 10px;
-                         margin: 5px;
-                         min-width: 125px;
-                         border: none;
-                         border-radius: 10px;
-                         cursor: pointer;
-                         color: white;
-                         transition: background-color 0.5s ease;
+
+#controls button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 5px;
+  min-width: 125px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
 }
-#startBtn{
-                         background-color: hsl(115, 100%, 40%);
+
+#startBtn {
+  background-color: hsl(120, 100%, 40%);
 }
-#startBtn:hover{
-                         background-color: hsl(115, 100%, 30%);
+
+#startBtn:hover {
+  background-color: hsl(120, 100%, 30%);
 }
-#stopBtn{
-                         background-color: hsl(10, 90%, 50%);
+
+#stopBtn {
+  background-color: hsl(0, 100%, 40%);
 }
-#stopBtn:hover{
-                         background-color: hsl(10, 90%, 40%);
+
+#stopBtn:hover {
+  background-color: hsl(0, 100%, 30%);
 }
-#resetBtn{
-                         background-color: hsl(205, 90%, 60%);
+
+#resetBtn {
+  background-color: hsl(210, 100%, 40%);
 }
-#resetBtn:hover{
-                         background-color: hsl(205, 90%, 50%);
+
+#resetBtn:hover {
+  background-color: hsl(210, 100%, 30%);
 }
