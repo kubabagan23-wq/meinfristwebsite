@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Simple Stopwatch</title>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 40px;
+  }
+  #display {
+    font-size: 4rem;
+    font-family: monospace;
+    background: white;
+    padding: 20px 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ccc;
+    margin-bottom: 20px;
+    width: max-content;
+  }
+  button {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 10px;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  #startBtn { background-color: #4caf50; }
+  #startBtn:hover { background-color: #3a8e34; }
+  #stopBtn { background-color: #f44336; }
+  #stopBtn:hover { background-color: #ba2d25; }
+  #resetBtn { background-color: #2196f3; }
+  #resetBtn:hover { background-color: #1769aa; }
+</style>
+</head>
+<body>
+
+<div id="display">00:00:00:00</div>
+
+<div>
+  <button id="startBtn">Start</button>
+  <button id="stopBtn">Stop</button>
+  <button id="resetBtn">Reset</button>
+</div>
+
+<script>
+  const display = document.getElementById('display');
+  const startBtn = document.getElementById('startBtn');
+  const stopBtn = document.getElementById('stopBtn');
+  const resetBtn = document.getElementById('resetBtn');
+
+  let startTime = 0;
+  let elapsedTime = 0;
+  let timerInterval;
+  let isRunning = false;
+
+  function timeToString(time) {
+    let diffInHrs = time / 3600000;
+    let hh = Math.floor(diffInHrs);
+
+    let diffInMin = (diffInHrs - hh) * 60;
+    let mm = Math.floor(diffInMin);
+
+    let diffInSec = (diffInMin - mm) * 60;
+    let ss = Math.floor(diffInSec);
+
+    let diffInMs = (diffInSec - ss) * 100;
+    let ms = Math.floor(diffInMs);
+
+    let formattedHH = hh.toString().padStart(2, "0");
+    let formattedMM = mm.toString().padStart(2, "0");
+    let formattedSS = ss.toString().padStart(2, "0");
+    let formattedMS = ms.toString().padStart(2, "0");
+
+    return `${formattedHH}:${formattedMM}:${formattedSS}:${formattedMS}`;
+  }
+
+  function start() {
+    if (!isRunning) {
+      startTime = Date.now() - elapsedTime;
+      timerInterval = setInterval(function printTime() {
+        elapsedTime = Date.now() - startTime;
+        display.textContent = timeToString(elapsedTime);
+      }, 10);
+      isRunning = true;
+    }
+  }
+
+  function stop() {
+    if (isRunning) {
+      clearInterval(timerInterval);
+      isRunning = false;
+    }
+  }
+
+  function reset() {
+    clearInterval(timerInterval);
+    display.textContent = "00:00:00:00";
+    elapsedTime = 0;
+    isRunning = false;
+  }
+
+  startBtn.addEventListener("click", start);
+  stopBtn.addEventListener("click", stop);
+  resetBtn.addEventListener("click", reset);
+</script>
+
+</body>
+</html>
