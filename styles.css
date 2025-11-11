@@ -71,3 +71,7 @@ body{
  80%{background-color: blue;}
  100%{background-color: purple;}
 }
+.fa-youtube{
+    width: 100px;
+    height: 100px;
+}
