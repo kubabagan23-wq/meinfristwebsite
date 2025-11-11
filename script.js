@@ -1,8 +1,10 @@
 console.log(`Hello there! This is part 1 of java script coding`);
 console.log(`TAKE YOUR CHRISMAS TREE DOWN OR ELSE THE GRINCH WILL HAVE TO DO IT HIMSELF!!!`);
 
-let age = 67;
-let fristname = Johnny
+let firstName = "Bro";
+let age = 21;
+let student = true;
 
-console.log{age};
-console.log{fristname};  
+console.log("Hello", firstName);
+console.log("You are", age, "years old");
+console.log("Enrolled:", student);
