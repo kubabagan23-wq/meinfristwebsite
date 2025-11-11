@@ -4,5 +4,5 @@ console.log(`TAKE YOUR CHRISMAS TREE DOWN OR ELSE THE GRINCH WILL HAVE TO DO IT 
 let age = 67;
 let fristname = Johnny
 
-console.log{"age"};
-console.log{"fristname"};  
+console.log{age};
+console.log{fristname};  
