@@ -8,3 +8,5 @@ age = age + 1;
 console.log("Hello", firstName);
 console.log("You are", age, "years old");
 console.log("Enrolled:", student);
+let username = window.prompt("What's your name?");
+console.log(username);
