@@ -11,3 +11,5 @@ console.log("Enrolled:", student);
 let x = 3.14;
 x = Math.round(x);
 console.log(x);
+let username = window.prompt("What's your name?");
+console.log(username);
