@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Custom Counter Program</title>
+  <title>Counter Program - Dark Theme</title>
   <style>
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+    html, body {
+      height: 100%;
       margin: 0;
-      background: #f0f0f0;
+      background: #181818;
+      color: #fff;
     }
     .counter-container {
       text-align: center;
@@ -20,6 +18,7 @@
       font-size: 50px;
       margin-bottom: 30px;
       margin-top: 10px;
+      color: #fff;
     }
     .button-group button {
       font-size: 18px;
@@ -28,7 +27,7 @@
       border: none;
       cursor: pointer;
       border-radius: 5px;
-      color: white;
+      color: #fff;
     }
     .red-btn {
       background-color: #e74c3c;
@@ -52,38 +51,18 @@
   </div>
   <script>
     let count = 0;
-
     document.getElementById("decreaseBtn").onclick = function() {
       count -= 1;
       document.getElementById("countLabel").textContent = count;
     };
-
     document.getElementById("resetBtn").onclick = function() {
       count = 0;
       document.getElementById("countLabel").textContent = count;
     };
-
     document.getElementById("increaseBtn").onclick = function() {
       count += 1;
       document.getElementById("countLabel").textContent = count;
     };
   </script>
- 
-  body {
-  background-color: #181818;
-  color: #ffffff;
-}
-
-/* For extra elements, like headers, paragraphs, or links: */
-h1, h2, h3, h4, h5, h6, p, a, label {
-  color: #ffffff;
-}
-
-/* Optional: style buttons with more contrast */
-button {
-  background-color: #333333;
-  color: #ffffff;
-}
-
 </body>
 </html>
