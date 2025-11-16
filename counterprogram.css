@@ -1,5 +1,41 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: #f0f0f0;
+}
+
+.counter-container {
+  text-align: center;
+}
+
 #countLabel {
   display: block;
-  text-align: center;
   font-size: 50px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.button-group button {
+  font-size: 18px;
+  padding: 10px 30px;
+  margin: 0 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+}
+
+.red-btn {
+  background-color: #e74c3c;
+}
+
+.green-btn {
+  background-color: #27ae60;
+}
+
+.blue-btn {
+  background-color: #2980b9;
 }
