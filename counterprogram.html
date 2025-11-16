@@ -3,7 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>Custom Counter Program</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: #f0f0f0;
+    }
+    .counter-container {
+      text-align: center;
+    }
+    #countLabel {
+      display: block;
+      font-size: 50px;
+      margin-bottom: 30px;
+      margin-top: 10px;
+    }
+    .button-group button {
+      font-size: 18px;
+      padding: 10px 30px;
+      margin: 0 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      color: white;
+    }
+    .red-btn {
+      background-color: #e74c3c;
+    }
+    .green-btn {
+      background-color: #27ae60;
+    }
+    .blue-btn {
+      background-color: #2980b9;
+    }
+  </style>
 </head>
 <body>
   <div class="counter-container">
@@ -14,6 +50,20 @@
       <button id="increaseBtn" class="green-btn">Increase</button>
     </div>
   </div>
-  <script src="index.js"></script>
+  <script>
+    let count = 0;
+    document.getElementById("decreaseBtn").onclick = function() {
+      count -= 1;
+      document.getElementById("countLabel").innerHTML = count;
+    };
+    document.getElementById("resetBtn").onclick = function() {
+      count = 0;
+      document.getElementById("countLabel").innerHTML = count;
+    };
+    document.getElementById("increaseBtn").onclick = function() {
+      count += 1;
+      document.getElementById("countLabel").innerHTML = count;
+    };
+  </script>
 </body>
 </html>
