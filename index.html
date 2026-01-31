@@ -113,38 +113,45 @@
         </a>
         <style>
 .navbar {
-  background-color: #57BAE5;        /* Your blue from before */
-  padding: 18px 25px;
+  background-color: #3b175a;      /* Your purple background */
+  padding: 20px 30px;
   display: flex;
-  justify-content: center;
-  gap: 35px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  justify-content: center;        /* Perfectly centered */
+  gap: 40px;
+  position: fixed;                /* Sticks to top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .navbar a {
-  color: white;
+  color: black;                   /* Black text */
   text-decoration: none;
   font-family: Arial, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
-  padding: 12px 18px;
-  border-radius: 8px;
+  padding: 15px 25px;
+  border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 .navbar a:hover {
-  background-color: rgba(255,255,255,0.25);
-  transform: translateY(-2px);
+  background-color: rgba(0,0,0,0.15);  /* 15% black darkness */
 }
 </style>
 </head>
 <body>
 
+<!-- NAVBAR - Put this at the VERY TOP of your page -->
 <nav class="navbar">
-  <a href="index.html">Home</a>
+  <a href="home.html">Home</a>
   <a href="calculator.html">Calculator</a>
   <a href="stopwatch.html">Stop Watch</a>
-  <a href="counterprogram.html">Counter Program</a>
+  <a href="counter.html">Counter Program</a>
 </nav>
+<div style="margin-top: 100px;">
+</div>
       </body>
   </html>
