@@ -111,10 +111,23 @@
             Click me to do somehting 
           </button>
         </a>
-        <style>
+        Here's your navbar fixed at the top of the webpage. It stays there when you scroll.
+
+Updated Complete HTML File
+xml
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Navbar</title>
+    <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         .navbar {
+            position: fixed;        /* Sticks to top */
+            top: 0;                 /* At the very top */
+            width: 100%;            /* Full width */
             display: flex;
             justify-content: center;
             gap: 40px;
@@ -123,6 +136,7 @@
             align-items: center;
             font-weight: bold;
             font-size: 18px;
+            z-index: 1000;          /* Stays on top of everything */
         }
         
         .navbar a {
@@ -133,10 +147,11 @@
         }
         
         .navbar a:hover {
-            background-color: #257882; /* 15% darker version of #2c949f */
+            background-color: #257882; /* 15% darker */
         }
         
         .content {
+            margin-top: 60px;       /* Space for navbar height */
             min-height: 100vh;
             padding: 40px;
             background-color: #f0f0f0;
@@ -150,8 +165,12 @@
     </nav>
     
     <div class="content">
-        <h1>Welcome to my site!</h1>
-        <p>Your page content goes here. Click navbar links above!</p>
+        <h1>Scroll down to test!</h1>
+        <p>This content starts below the navbar. The navbar stays fixed at the top.</p>
+        <!-- Add lots of content to test scrolling -->
+        <div style="height: 2000px; background: linear-gradient(to bottom, #f0f0f0, #ddd); padding: 20px;">
+            <p>Keep scrolling... navbar stays at top!</p>
+        </div>
     </div>
       </body>
   </html>
