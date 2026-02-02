@@ -111,10 +111,47 @@
             Click me to do somehting 
           </button>
         </a>
-        <nav>
-          <ul>
-            <li><a href="index2.html"></a>Go to index2html and see hwat happens</li>
-          </ul>
-        </nav>
+        <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background-color: #2c949f;
+            height: 60px;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .navbar a {
+            color: black;
+            text-decoration: none;
+            padding: 20px 25px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .navbar a:hover {
+            background-color: #257882; /* 15% darker version of #2c949f */
+        }
+        
+        .content {
+            min-height: 100vh;
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#tools">Calculator, Stopwatch & Counter</a>
+    </nav>
+    
+    <div class="content">
+        <h1>Welcome to my site!</h1>
+        <p>Your page content goes here. Click navbar links above!</p>
+    </div>
       </body>
   </html>
